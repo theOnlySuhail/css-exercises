@@ -25,7 +25,7 @@ html {
 }
 
 .sidebar {
-  background-color: #005B94;
+  background-color: #005b94;
 }
 
 .nav {
@@ -33,7 +33,7 @@ html {
 }
 
 .article {
-  background-color: #7E1DC3;
+  background-color: #7e1dc3;
 }
 
 .footer {
@@ -45,4 +45,34 @@ html {
   font-family: sans-serif;
   color: white;
   text-align: left;
+}
+
+/* --- Solution --- */
+
+.container {
+  outline: 20px solid red;
+  display: grid;
+  grid-template: 100px 100px 500px 100px  / 300px 900px;
+  gap: 15px;
+}
+
+.header {
+  grid-column: 1 / -1;
+}
+
+.sidebar {
+  grid-row: 2 / span 2;
+}
+
+.nav {
+  grid-area: 2 / 2 / 3 / -1;
+}
+
+.article {
+  grid-area: 3 / 2 / 4 / -1;
+}
+
+.footer {
+  grid-column: 1 / -1;
+  grid-row-end: -1;
 }
