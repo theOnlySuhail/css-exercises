@@ -26,7 +26,7 @@
 }
 
 .sidebar {
-  background-color: #C50208;
+  background-color: #c50208;
 }
 
 .sidebar .photo {
@@ -37,7 +37,6 @@
   border-radius: 10px;
 }
 
-
 .sidebar .side-content {
   background-color: white;
   color: black;
@@ -46,7 +45,7 @@
 }
 
 .nav {
-  background-color: #C50208;
+  background-color: #c50208;
 }
 
 .nav ul li {
@@ -65,7 +64,7 @@
 }
 
 .article .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: black;
   text-align: center;
 }
@@ -88,4 +87,71 @@
 .footer p {
   font-size: 13px;
   font-weight: normal;
+}
+
+/* --- Solutino --- */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 4px;
+}
+
+.header {
+  grid-column: 1 / 3;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+.header .logo {
+  justify-self: start;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+/* SIDEBAR */
+.sidebar {
+  grid-row: 2 / 4;
+
+  display: grid;
+  gap: 50px;
+}
+
+.side-content,
+.sidebar .photo {
+  display: grid;
+  align-items: center;
+}
+
+/* NAVBAR */
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ARTICLE */
+.article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* CARD */
+.article .card {
+  height: 200px;
+}
+.card p {
+  padding: 5px;
+}
+
+/* FOOTER */
+.footer {
+  grid-column: 1 / 3;
 }
